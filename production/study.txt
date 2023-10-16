@@ -1,5 +1,6 @@
 Name: Paridhi Garg
 Subject: The structure of a Fantasy novel and exploring how to create fictionalized characters
+I want to create a fantasy narrative based on this study using javascript objects
 
 1. Characters
     Are they humans? Are they animals? Are they creatures of your imagination?
