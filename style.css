@@ -1,0 +1,22 @@
+.main-content {
+    display: flex;
+}
+
+.section-1{
+    flex: 33%;
+    background-color: aqua;
+    border: 1cm;
+    border-color: black;
+}
+
+.section-2{
+    flex: 33%;
+    background-color: pink;
+}
+.section-3{
+    flex: 33%;
+    background-color: yellow;
+}
+.section-4{
+    background-color: purple;
+}

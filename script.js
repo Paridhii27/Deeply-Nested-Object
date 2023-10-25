@@ -7,10 +7,10 @@ let character = {
     //Description of character 1
 
     IsHuman: true,
-    Name: Sophie,
+    Name: "Sophie",
     Age: 24,
-    LocatedIn: "New York",
-    Features: ["Blue eyes", "Dark Brown straight hair", "5'5 feet tall"],
+    RoleInStory: "Main character",
+    Features: ["Blue eyes", "Dark Brown hair", "5'5 feet tall"],
     Characteristics: [
       "Loves waffles and fries",
       "Introverted",
@@ -18,7 +18,11 @@ let character = {
     ],
     Hobbies: ["Reading romcoms", "Going on Hikes", "Cooking"],
 
-    RoleInStory: "Main character",
+    Setting: {
+      LocatedIn: "New York",
+      Weather: "Breezy fall weather",
+      Time: new Date("2023-10-25")
+    },
   },
 
   character2: {
@@ -28,6 +32,8 @@ let character = {
     Name: "Hazel",
     Breed: "Golden Doodle",
     Age: 1,
+    RoleInStory: "Thinks its the main character",
+
     Features: ["Soft Hazel eyes", "Fluffy brown fur", "Wagging tail"],
     Characteristics: ["Friendly", "Scared of Thunder"],
     Hobbies: [
@@ -37,7 +43,12 @@ let character = {
       "Licking every bit of food",
     ],
 
-    RoleInStory: "Thinks its the main character",
+    Setting: {
+      LocatedIn: "New York Sophie's apartment",
+      Weather: "Breezy fall weather",
+      Time: new Date("2023-10-25")
+    },
+
   },
 
   character3: {
@@ -46,12 +57,17 @@ let character = {
     IsHuman: true,
     Name: "James",
     Age: 25,
-    LocatedIn: "London",
+    RoleInStory: "Sophie's bestfriend",
+
     Features: ["Grey Eyes", "Dark Brown wavy hair", "5'11 feet tall"],
     Characteristics: ["Extroverted", "Scared of confined spaces"],
     Hobbies: ["Photography", "Gaming", "Basketball", "Annoying Sophie"],
 
-    RoleInStory: "Sophie's bestfriend",
+    Setting: {
+      LocatedIn: "London",
+      Weather: "Mild temerature with frequenct rain",
+      Time: new Date("2023-10-26")
+    },
   },
 };
 
@@ -90,21 +106,33 @@ let structure = {
   Chronolong: true,
 };
 
-let setting = {
-  //where does the story take place
-
-  Place: ["New York", "London"],
-  Description:
-    "The story is based in the current time and takes place over a year.",
-  Year: 2023,
-  StartsIn: October,
-  WeatherLondon: "Mild temerature with frequenct rain",
-  WeatherNewYork: "Breezy fall weather",
-};
-
 let genre = {
   //theme of the story
 
   Category: ["Romcom", "Humour", "Fiction"],
   Theme: "Friends to Lover Trope",
 };
+
+// Choosing what character is introduced
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max) +1;
+}
+
+console.log(getRandomInt(3));
+
+if (getRandomInt(3) == 0){
+  document.querySelector('.section-1-name').innerHTML = `Name: $(character.character1.Name)`
+  document.querySelector('.section-1-age').innerHTML = character.character1.Age
+}
+if (getRandomInt(3) == 1){
+  document.querySelector('.section-1-name').innerHTML = character.character2.Name
+  document.querySelector('.section-1-age').innerHTML = character.character2.Age
+}
+if (getRandomInt(3) == 2){
+  document.querySelector('.section-1-name').innerHTML = character.character3.Name
+  document.querySelector('.section-1-age').innerHTML = character.character3.Age
+}
+
+// Starting to add javascript objects to html elements
+ 
