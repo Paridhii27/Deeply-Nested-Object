@@ -1,22 +1,48 @@
 .main-content {
     display: flex;
+    justify-content: space-between;
+}
+
+body {
+    /* font-family: 'Waiting for the Sunrise', cursive; */
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+    background-image: url(./assets/background2.jpg);
 }
 
 .section-1{
     flex: 33%;
-    background-color: aqua;
-    border: 1cm;
+    /* height:100vh; */
+    padding:2%;
+    align-content: center;
+    margin:auto;
+    /* background-color: aqua; */
+    border-width: thin;
     border-color: black;
+    border-style: solid;
+    border-radius: 5%;
 }
 
 .section-2{
     flex: 33%;
-    background-color: pink;
+    /* background-color: pink; */
+    margin:auto;
+    border-width: thin;
+    border-style: solid;
 }
 .section-3{
     flex: 33%;
-    background-color: yellow;
+    padding:2%;
+    /* background-color: yellow; */
+    /* background-image: url("./assets/paper.png"); */
+    margin:auto;
+    /* border-style: solid */
 }
 .section-4{
     background-color: purple;
+}
+
+img {
+    padding:auto;
+    height:70%;
 }

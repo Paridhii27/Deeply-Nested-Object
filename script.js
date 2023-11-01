@@ -8,7 +8,7 @@ let character = {
 
     IsHuman: true,
     Name: "Sophie",
-    Age: 24,
+    Age: 19,
     RoleInStory: "Main character",
     Features: ["Blue eyes", "Dark Brown hair", "5'5 feet tall"],
     Characteristics: [
@@ -21,7 +21,7 @@ let character = {
     Setting: {
       LocatedIn: "New York",
       Weather: "Breezy fall weather",
-      Time: new Date("2023-10-25")
+      Time: new Date("2023-10-25"),
     },
   },
 
@@ -46,9 +46,8 @@ let character = {
     Setting: {
       LocatedIn: "New York Sophie's apartment",
       Weather: "Breezy fall weather",
-      Time: new Date("2023-10-25")
+      Time: new Date("2023-10-25"),
     },
-
   },
 
   character3: {
@@ -56,7 +55,7 @@ let character = {
 
     IsHuman: true,
     Name: "James",
-    Age: 25,
+    Age: 20,
     RoleInStory: "Sophie's bestfriend",
 
     Features: ["Grey Eyes", "Dark Brown wavy hair", "5'11 feet tall"],
@@ -66,7 +65,7 @@ let character = {
     Setting: {
       LocatedIn: "London",
       Weather: "Mild temerature with frequenct rain",
-      Time: new Date("2023-10-26")
+      Time: new Date("2023-10-26"),
     },
   },
 };
@@ -116,23 +115,83 @@ let genre = {
 // Choosing what character is introduced
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * max) +1;
+  var num = Math.floor(Math.random() * max)
+  console.log(num)
+  return num 
+  // return Math.floor(Math.random() * max);
 }
 
-console.log(getRandomInt(3));
+// console.log(getRandomInt(3));
 
-if (getRandomInt(3) == 0){
-  document.querySelector('.section-1-name').innerHTML = `Name: $(character.character1.Name)`
-  document.querySelector('.section-1-age').innerHTML = character.character1.Age
-}
-if (getRandomInt(3) == 1){
-  document.querySelector('.section-1-name').innerHTML = character.character2.Name
-  document.querySelector('.section-1-age').innerHTML = character.character2.Age
-}
-if (getRandomInt(3) == 2){
-  document.querySelector('.section-1-name').innerHTML = character.character3.Name
-  document.querySelector('.section-1-age').innerHTML = character.character3.Age
+// Starting to add javascript objects to html elements based on which character's POV is chosen
+
+if (getRandomInt(3) == 0) {
+
+  console.log(getRandomInt(3));
+
+  document.querySelector(".section-1-name").innerHTML =
+    character.character1.Name;
+  // `Name: $(character.character1.Name)`
+  document.querySelector(".section-1-age").innerHTML = character.character1.Age;
+  document.querySelector(".section-1-location").innerHTML =
+    character.character1.Setting.LocatedIn;
+  document.querySelector(".section-1-features").innerHTML =
+    character.character1.Features;
+  document.querySelector(".section-1-characteristic").innerHTML =
+    character.character1.Characteristics;
+
+    var img = document.createElement("img");
+  img.src = "./assets/sophie.png";
+  var src = document.getElementById("image1");
+  src.appendChild(img);
+
+  document.querySelector(".section-3-weather").innerHTML =
+    character.character1.Setting.Weather;
+  document.querySelector(".section-3-time").innerHTML =
+    character.character1.Setting.Time;
 }
 
-// Starting to add javascript objects to html elements
- 
+ else if (getRandomInt(3) == 2){
+
+  document.querySelector(".section-1-name").innerHTML =
+    character.character3.Name;
+  document.querySelector(".section-1-age").innerHTML = character.character3.Age;
+  document.querySelector(".section-1-location").innerHTML =
+    character.character3.Setting.LocatedIn;
+  document.querySelector(".section-1-features").innerHTML =
+    character.character3.Features;
+  document.querySelector(".section-1-characteristic").innerHTML =
+    character.character3.Characteristics;
+
+    var img = document.createElement("img");
+  img.src = "./assets/james.png";
+  var src = document.getElementById("image1");
+  src.appendChild(img);
+
+  document.querySelector(".section-3-weather").innerHTML =
+    character.character3.Setting.Weather;
+  document.querySelector(".section-3-time").innerHTML =
+    character.character3.Setting.Time;
+}
+
+else{
+  document.querySelector(".section-1-name").innerHTML =
+    character.character2.Name;
+  document.querySelector(".section-1-age").innerHTML = character.character2.Age;
+  document.querySelector(".section-1-location").innerHTML =
+    character.character2.Setting.LocatedIn;
+  document.querySelector(".section-1-features").innerHTML =
+    character.character2.Features;
+  document.querySelector(".section-1-characteristic").innerHTML =
+    character.character2.Characteristics;
+
+  var img = document.createElement("img");
+  img.src = "./assets/hazel.png";
+  var src = document.getElementById("image1");
+  src.appendChild(img);
+
+  document.querySelector(".section-3-weather").innerHTML =
+    character.character2.Setting.Weather;
+  document.querySelector(".section-3-time").innerHTML =
+    character.character2.Setting.Time;
+}
