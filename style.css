@@ -22,6 +22,10 @@ body {
      /* background-color: aqua; */
 }
 
+.section-1:hover {
+    background-color: #d1d5e8;
+}
+
 .section-2{
     flex: 33%;
     display: flex;
@@ -34,6 +38,7 @@ body {
     border-style: solid;
     /* background-color: pink; */
 }
+
 .section-3{
     flex: 33%;
     padding:2%;
@@ -45,6 +50,10 @@ body {
     /* background-color: yellow; */
 }
 
+.section-3:hover {
+    background-color: #f5e1bc;
+}
+
 .section-4{
     padding-left:27%;
     align-content: center;
@@ -53,6 +62,10 @@ body {
     border-color: black;
     border-style: solid;
     border-radius: 10%;
+}
+
+.section-4:hover {
+    background-color: #d3e3e2;
 }
 
 #image1 {

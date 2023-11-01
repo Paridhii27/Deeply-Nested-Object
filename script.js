@@ -64,9 +64,9 @@ let character = {
 
     Features: ["Grey Eyes ", "Dark Brown wavy hair ", "5'11 feet tall "],
     Characteristics: ["Extroverted ", "Scared of confined spaces "],
-    Hobbies: ["Photography", "Skateboarding", "Basketball", "Annoying Sophie"],
+    Hobbies: ["Photography ", "Skateboarding ", "Basketball ", "Annoying Sophie "],
 
-    catchphrase: "hi",
+    catchphrase: "how do you do?",
 
     Setting: {
       LocatedIn: "London",
