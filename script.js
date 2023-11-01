@@ -12,11 +12,13 @@ let character = {
     RoleInStory: "Main character",
     Features: ["Blue eyes", "Dark Brown hair", "5'5 feet tall"],
     Characteristics: [
-      "Loves waffles and fries", 
-      "Introverted",
-      "Scared of confrontation",
+      "Loves waffles and fries ",
+      "Introverted ",
+      "Scared of confrontation ",
     ],
-    Hobbies: ["Reading romcoms", "Going on Hikes", "Cooking"],
+    Hobbies: ["Reading romcoms ", "Going on Hikes ", "Cooking "],
+
+    catchphrase: "I need coffee",
 
     Setting: {
       LocatedIn: "New York",
@@ -34,14 +36,16 @@ let character = {
     Age: 1,
     RoleInStory: "Thinks its the main character",
 
-    Features: ["Soft Hazel eyes", "Fluffy brown fur", "Wagging tail"],
-    Characteristics: ["Friendly", "Scared of Thunder"],
+    Features: ["Soft Hazel eyes ", "Fluffy brown fur ", "Wagging tail "],
+    Characteristics: ["Friendly ", "Scared of Thunder"],
     Hobbies: [
-      "Walking",
-      "Jumping",
-      "Playing with a ball",
-      "Licking every bit of food",
+      "Walking ",
+      "Jumping ",
+      "Playing with a ball ",
+      "Licking every bit of food ",
     ],
+
+    catchphrase: "ruff",
 
     Setting: {
       LocatedIn: "New York Sophie's apartment",
@@ -58,9 +62,11 @@ let character = {
     Age: 20,
     RoleInStory: "Sophie's bestfriend",
 
-    Features: ["Grey Eyes", "Dark Brown wavy hair", "5'11 feet tall"],
-    Characteristics: ["Extroverted", "Scared of confined spaces"],
-    Hobbies: ["Photography", "Gaming", "Basketball", "Annoying Sophie"],
+    Features: ["Grey Eyes ", "Dark Brown wavy hair ", "5'11 feet tall "],
+    Characteristics: ["Extroverted ", "Scared of confined spaces "],
+    Hobbies: ["Photography", "Skateboarding", "Basketball", "Annoying Sophie"],
+
+    catchphrase: "hi",
 
     Setting: {
       LocatedIn: "London",
@@ -115,83 +121,108 @@ let genre = {
 // Choosing what character is introduced
 
 function getRandomInt(max) {
-  var num = Math.floor(Math.random() * max)
-  console.log(num)
-  return num 
-  // return Math.floor(Math.random() * max);
+  var num = Math.floor(Math.random() * max);
+  console.log(num);
+  return num;
 }
-
-// console.log(getRandomInt(3));
 
 // Starting to add javascript objects to html elements based on which character's POV is chosen
 
 if (getRandomInt(3) == 0) {
+  // Sophie's fictional character board
 
   console.log(getRandomInt(3));
 
   document.querySelector(".section-1-name").innerHTML =
-  "Name: " + character.character1.Name;
+    "Name: " + character.character1.Name + " ཐིཋྀ";
   // `Name: $(character.character1.Name)`
-  document.querySelector(".section-1-age").innerHTML = "Age: " + character.character1.Age;
-  document.querySelector(".section-1-location").innerHTML =
-  "Location: " + character.character1.Setting.LocatedIn;
+  document.querySelector(".section-1-age").innerHTML =
+    "Age: " + character.character1.Age;
+  document.querySelector(".section-1-role").innerHTML =
+    "Role: " + character.character1.RoleInStory;
   document.querySelector(".section-1-features").innerHTML =
-    character.character1.Features;
+  "Features: " + character.character1.Features;
   document.querySelector(".section-1-characteristic").innerHTML =
-    character.character1.Characteristics;
+  "Characteristics: " + character.character1.Characteristics;
 
-    var img = document.createElement("img");
+  // Adding image
+  var img = document.createElement("img");
   img.src = "./assets/sophie.png";
   var src = document.getElementById("image1");
   src.appendChild(img);
 
-  document.querySelector(".section-3-weather").innerHTML =
-    character.character1.Setting.Weather;
-  document.querySelector(".section-3-time").innerHTML =
-    character.character1.Setting.Time;
-}
+  document.querySelector(".section-2-catchphrase").innerHTML =
+  character.character1.catchphrase;
 
- else if (getRandomInt(3) == 2){
+  document.querySelector(".section-3-location").innerHTML =
+    "Location: " + character.character1.Setting.LocatedIn;
+  document.querySelector(".section-3-weather").innerHTML =
+  "Weather: " + character.character1.Setting.Weather;
+  document.querySelector(".section-3-time").innerHTML =
+  "Time: " + character.character1.Setting.Time;
+
+} 
+
+else if (getRandomInt(3) == 2) {
+  // James' fictional character board
 
   document.querySelector(".section-1-name").innerHTML =
-  "Name: " + character.character3.Name;
-  document.querySelector(".section-1-age").innerHTML = "Age: " + character.character3.Age;
-  document.querySelector(".section-1-location").innerHTML =
-  "Location: " + character.character3.Setting.LocatedIn;
-  document.querySelector(".section-1-features").innerHTML =
-    character.character3.Features;
-  document.querySelector(".section-1-characteristic").innerHTML =
-    character.character3.Characteristics;
+    "Name: " + character.character3.Name + " 🛹";
+  document.querySelector(".section-1-age").innerHTML =
+    "Age: " + character.character3.Age;
+  document.querySelector(".section-1-role").innerHTML =
+    "Role: " + character.character3.RoleInStory;
 
-    var img = document.createElement("img");
+  document.querySelector(".section-1-features").innerHTML =
+  "Features: " + character.character3.Features;
+  document.querySelector(".section-1-characteristic").innerHTML =
+  "Characteristics: " + character.character3.Characteristics;
+
+  // Adding image
+  var img = document.createElement("img");
   img.src = "./assets/james.png";
   var src = document.getElementById("image1");
   src.appendChild(img);
 
+  document.querySelector(".section-2-catchphrase").innerHTML =
+  character.character3.catchphrase;
+
+  document.querySelector(".section-3-location").innerHTML =
+    "Location: " + character.character3.Setting.LocatedIn;
   document.querySelector(".section-3-weather").innerHTML =
-    character.character3.Setting.Weather;
+  "Weather: " + character.character3.Setting.Weather;
   document.querySelector(".section-3-time").innerHTML =
-    character.character3.Setting.Time;
-}
+  "Time: " + character.character3.Setting.Time;
 
-else{
+} 
+
+else {
+  // Hazel's fictional character board. Hazel occurs the most because it thinks its the main character
   document.querySelector(".section-1-name").innerHTML =
-  "Name: " + character.character2.Name;
-  document.querySelector(".section-1-age").innerHTML = "Age: " + character.character2.Age;
-  document.querySelector(".section-1-location").innerHTML =
-  "Location: " + character.character2.Setting.LocatedIn;
+    "Name: " + character.character2.Name + " ૮ ˘ﻌ˘ ა";
+  document.querySelector(".section-1-age").innerHTML =
+    "Age: " + character.character2.Age;
+  document.querySelector(".section-1-role").innerHTML =
+    "Role: " + character.character2.RoleInStory;
+  
   document.querySelector(".section-1-features").innerHTML =
-    character.character2.Features;
+  "Features: " + character.character2.Features;
   document.querySelector(".section-1-characteristic").innerHTML =
-    character.character2.Characteristics;
+  "Characteristics: " + character.character2.Characteristics;
 
+  // Adding image
   var img = document.createElement("img");
   img.src = "./assets/hazel.png";
   var src = document.getElementById("image1");
   src.appendChild(img);
 
+  document.querySelector(".section-2-catchphrase").innerHTML =
+  character.character2.catchphrase;
+
+  document.querySelector(".section-3-location").innerHTML =
+    "Location: " + character.character2.Setting.LocatedIn;
   document.querySelector(".section-3-weather").innerHTML =
-    character.character2.Setting.Weather;
+  "Weather: " + character.character2.Setting.Weather;
   document.querySelector(".section-3-time").innerHTML =
-    character.character2.Setting.Time;
+  "Time: " + character.character2.Setting.Time;
 }
