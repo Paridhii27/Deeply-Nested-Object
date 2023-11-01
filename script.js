@@ -161,6 +161,9 @@ if (getRandomInt(3) == 0) {
   document.querySelector(".section-3-time").innerHTML =
   "Time: " + character.character1.Setting.Time;
 
+  document.querySelector(".section-4-hobbies").innerHTML =
+  "Hobbies: " + character.character1.Hobbies;
+
 } 
 
 else if (getRandomInt(3) == 2) {
@@ -194,6 +197,9 @@ else if (getRandomInt(3) == 2) {
   document.querySelector(".section-3-time").innerHTML =
   "Time: " + character.character3.Setting.Time;
 
+  document.querySelector(".section-4-hobbies").innerHTML =
+  "Hobbies: " + character.character3.Hobbies;
+
 } 
 
 else {
@@ -225,4 +231,7 @@ else {
   "Weather: " + character.character2.Setting.Weather;
   document.querySelector(".section-3-time").innerHTML =
   "Time: " + character.character2.Setting.Time;
+
+  document.querySelector(".section-4-hobbies").innerHTML =
+  "Hobbies: " + character.character2.Hobbies;
 }

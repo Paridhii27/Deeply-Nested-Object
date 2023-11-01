@@ -1,7 +1,5 @@
 .main-content {
     display: flex;
-    /* margin:auto; */
-    /* padding:5%; */
     justify-content: center;
 }
 
@@ -9,58 +7,59 @@ body {
     /* font-family: 'Waiting for the Sunrise', cursive; */
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 20px;
-    background-image: url(./assets/background.jpg);
+    background-image: url(./assets/background.jpg); /*paper texture background*/
 }
 
 .section-1{
     flex: 33%;
-    /* height:100vh; */
     padding:2%;
     align-content: center;
     margin:auto;
-    /* background-color: aqua; */
     border-width: thin;
     border-color: black;
     border-style: solid;
     border-radius: 5%;
+     /* background-color: aqua; */
 }
 
 .section-2{
     flex: 33%;
     display: flex;
     justify-self: center;
-    /* background-color: pink; */
     padding-left:10%;
     padding-right:10%;
-    /* margin:auto; */
     align-items: space-between;
     border-radius: 5%;
     border-width: thin;
     border-style: solid;
+    /* background-color: pink; */
 }
 .section-3{
     flex: 33%;
     padding:2%;
+    margin:auto;
     border-width: thin;
     border-color: black;
     border-style: solid;
     border-radius: 5%;
     /* background-color: yellow; */
-    /* background-image: url("./assets/paper.png"); */
-    margin:auto;
-    /* border-style: solid */
 }
+
 .section-4{
-    background-color: purple;
+    padding-left:27%;
+    align-content: center;
+    margin:auto;
+    border-width: thin;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10%;
 }
 
 #image1 {
-    /* padding:auto; */
     align-self: center;
     height:60vh;
 }
 
 img {
-    /* padding:auto; */
     height:60vh;
 }
