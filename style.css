@@ -1,6 +1,8 @@
 .main-content {
     display: flex;
-    justify-content: space-between;
+    /* margin:auto; */
+    /* padding:5%; */
+    justify-content: center;
 }
 
 body {
@@ -25,14 +27,24 @@ body {
 
 .section-2{
     flex: 33%;
+    display: flex;
+    justify-self: center;
     /* background-color: pink; */
-    margin:auto;
+    padding-left:10%;
+    padding-right:10%;
+    /* margin:auto; */
+    align-items: space-between;
+    border-radius: 5%;
     border-width: thin;
     border-style: solid;
 }
 .section-3{
     flex: 33%;
     padding:2%;
+    border-width: thin;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5%;
     /* background-color: yellow; */
     /* background-image: url("./assets/paper.png"); */
     margin:auto;
@@ -43,6 +55,6 @@ body {
 }
 
 img {
-    padding:auto;
-    height:70%;
+    /* padding:auto; */
+    height:60vh;
 }

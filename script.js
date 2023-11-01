@@ -12,7 +12,7 @@ let character = {
     RoleInStory: "Main character",
     Features: ["Blue eyes", "Dark Brown hair", "5'5 feet tall"],
     Characteristics: [
-      "Loves waffles and fries",
+      "Loves waffles and fries", 
       "Introverted",
       "Scared of confrontation",
     ],
@@ -130,11 +130,11 @@ if (getRandomInt(3) == 0) {
   console.log(getRandomInt(3));
 
   document.querySelector(".section-1-name").innerHTML =
-    character.character1.Name;
+  "Name: " + character.character1.Name;
   // `Name: $(character.character1.Name)`
-  document.querySelector(".section-1-age").innerHTML = character.character1.Age;
+  document.querySelector(".section-1-age").innerHTML = "Age: " + character.character1.Age;
   document.querySelector(".section-1-location").innerHTML =
-    character.character1.Setting.LocatedIn;
+  "Location: " + character.character1.Setting.LocatedIn;
   document.querySelector(".section-1-features").innerHTML =
     character.character1.Features;
   document.querySelector(".section-1-characteristic").innerHTML =
@@ -154,10 +154,10 @@ if (getRandomInt(3) == 0) {
  else if (getRandomInt(3) == 2){
 
   document.querySelector(".section-1-name").innerHTML =
-    character.character3.Name;
-  document.querySelector(".section-1-age").innerHTML = character.character3.Age;
+  "Name: " + character.character3.Name;
+  document.querySelector(".section-1-age").innerHTML = "Age: " + character.character3.Age;
   document.querySelector(".section-1-location").innerHTML =
-    character.character3.Setting.LocatedIn;
+  "Location: " + character.character3.Setting.LocatedIn;
   document.querySelector(".section-1-features").innerHTML =
     character.character3.Features;
   document.querySelector(".section-1-characteristic").innerHTML =
@@ -176,10 +176,10 @@ if (getRandomInt(3) == 0) {
 
 else{
   document.querySelector(".section-1-name").innerHTML =
-    character.character2.Name;
-  document.querySelector(".section-1-age").innerHTML = character.character2.Age;
+  "Name: " + character.character2.Name;
+  document.querySelector(".section-1-age").innerHTML = "Age: " + character.character2.Age;
   document.querySelector(".section-1-location").innerHTML =
-    character.character2.Setting.LocatedIn;
+  "Location: " + character.character2.Setting.LocatedIn;
   document.querySelector(".section-1-features").innerHTML =
     character.character2.Features;
   document.querySelector(".section-1-characteristic").innerHTML =
